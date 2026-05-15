@@ -1,6 +1,11 @@
 autoscaling:
-  keda:
-    customTriggers:
-      hikari-active-connections:
+    enabled: true
+    type: keda
+    keda:
+      minReplicaCount: 1
+      maxReplicaCount: 10
+      pollingInterval: 30
+      customTriggers:
+        hikari-active-connections:
           metadata:
               threshold: "60"
