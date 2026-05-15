@@ -1,0 +1,6 @@
+autoscaling:
+  keda:
+    customTriggers:
+      hikari-active-connections:
+          metadata:
+              threshold: "60"
